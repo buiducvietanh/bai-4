@@ -4,8 +4,10 @@ void main(){
     'b':123,
     'abcd':1234,
   };
-  list.removeWhere((key,value) => key.length == 4);
-print(list);
+ Iterable<String> fnames = list.keys.where((key) => key.length == 4);
+  for (String name in fnames) {
+    print(name);
+  }
     
  
 
